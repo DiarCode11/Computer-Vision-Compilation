@@ -50,7 +50,7 @@ st.write("""
 # Deteksi Aksara Bali
 """)
 
-st.write("Tuliskan aksara dan kami akan memprediksi nama dari aksara tersebut dan menampilkan informasi tentang aksara tersebut")
+st.write("Tuliskan aksara dan kami akan memprediksi nama dari aksara tersebut")
 
 stroke_width = 10
 stroke_color = "#eee"
