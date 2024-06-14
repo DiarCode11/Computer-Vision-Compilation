@@ -1,0 +1,55 @@
+Klasifikasi Tulisan Tangan Aksara Bali: 
+- Dataset : https://www.kaggle.com/datasets/hariangr/aksara-bali-datasets
+- Total Dataset : 4151 files
+- Preprocessing : Zoom out, resizing, convert to biner
+- Feature Extraction : Histogram of Oriented Gradient (HOG)
+- Classifier : Support Vector Machine kernel Polynomial
+- Spliting Dataset : 80% train, 20% test
+- Accuracy : 87% dengan degree 4
+- Hasil : Hasil uji coba melalui aplikasi streamlit masih ada salah prediksi, sehingga masih diperlukan penyesuaian konfigurasi baik dari dataset ataupun hyperparameternya.
+
+
+Ripped Strawberry Detection (Deteksi Stroberi Matang): 
+- Dataset : Custom (https://drive.google.com/drive/folders/1hixiQWMP1URpbJwpNNIq2udQ4Lj4MZOv?usp=sharing)
+- Tipe Augmentasi : Flip, Rotate, Shear, Blur, Noise, Mosaic
+- Total Dataset: 192 files (dengan Augmentasi)
+- Jumlah kelas : 1 (ripe)
+- Spliting Dataset : 88% train, 8% val, 4% test
+- Model : Ultralytics YOLOv8
+- Epochs : 200
+- batch : 16
+- image_size : 640
+- optimizer : adamW
+- learning_rate : 0.002
+- momentum : 0.9
+- layer : 168
+- Precision : 0.864
+- Recall : 0.855
+- Mean Average Precision (mAP)L 0.912
+- Mean Average Precision 50-95 : 0.67
+- Hasil : Hasil deteksi sudah cukup baik namun untuk beberapa kondisi ketika resolusi kamera rendah, bentuk objek lain yang mirip dengan stroberi atau pencahayaan yang kurang seringkali membuat model mendeteksi objek yang salah
+
+Ripped Strawberry Segmentation (Segmentasi Strawberry Matang): 
+- Dataset : Custom (https://drive.google.com/drive/folders/1hixiQWMP1URpbJwpNNIq2udQ4Lj4MZOv?usp=sharing)
+- Tipe Augmentasi : Flip, Crop, Rotation, Saturation, Blur, Noise
+- Total Dataset: 214 file (dengan Augmentasi)
+- Jumlah kelas: 1 (ripe)
+- Splitting Dataset : 93% train, 4% val, 3% test
+- Model : Ultralytics YOLOv8
+- Epochs : 200
+- batch : 16
+- image_size : 640
+- optimizer : adamW
+- learning_rate : 0.002
+- momentum : 0.9
+- layer : 195
+- Mask Precision : 0.892
+- Mask Recall : 0.851
+- Mask mAP50 : 0.918
+- Mask mAP50-95 : 0.733
+Hasil: hasil dari deteksi sudah cukup memuaskan namun resolusi dari kamera sangat berpengaruh dalam keakuratan segmentasi. Selain itu jika terdapat objek dengan kontur yang mirip dengan stroberi seringkali dideteksi sebagai stroberi sehingga deteksi menjadi salah.
+
+
+
+
+
